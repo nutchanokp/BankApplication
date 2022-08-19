@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_4dp">4dp</dimen>
+
+    <!--  text size  -->
+    <dimen name="text_size_default_xxxl">44sp</dimen>
+    <dimen name="text_size_default_xxl">34sp</dimen>
+    <dimen name="text_size_default_xl">30sp</dimen>
+    <dimen name="text_size_default_l">26sp</dimen>
+    <dimen name="text_size_default_mm">24sp</dimen>
+    <dimen name="text_size_default_m">22sp</dimen>
+    <dimen name="text_size_default_sm">20sp</dimen>
+    <dimen name="text_size_default_s">18sp</dimen>
+    <dimen name="text_size_default_ss">16sp</dimen>
+    <dimen name="text_size_default_sss">14sp</dimen>
+    <dimen name="text_size_default_ssss">12sp</dimen>
+    <dimen name="text_size_default_sssss">8sp</dimen>
+    <dimen name="margin_8dp">8dp</dimen>
+    <dimen name="padding_16dp">16dp</dimen>
+    <dimen name="cardview_conner_radius">24dp</dimen>
+    <dimen name="margin_10dp">10dp</dimen>
+    <dimen name="margin_20dp">20dp</dimen>
+    <dimen name="margin_5dp">5dp</dimen>
+
+</resources>

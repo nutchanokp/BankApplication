@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+<!--        <import type="com.feyverly.pos.extensions.StringExtensionsKt"/>-->
+        <variable
+            name="item"
+            type="com.nutchanok.nat.bankapplication.model.UIContentModel" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/rlRoot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/bg_card_account"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="asdfqwerasdf"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="@+id/imageView"
+                    app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_name"
+                    app:layout_constraintTop_toTopOf="@+id/imageView">
+
+                    <TextView
+                        android:id="@+id/tv_savings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Saving"
+                        android:textColor="@color/white"
+                        app:layout_constraintStart_toStartOf="@+id/imageView"
+                        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+                    <TextView
+                        android:id="@+id/tv_main"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Main"
+                        android:textColor="@color/white"
+                        app:layout_constraintStart_toStartOf="@+id/imageView"
+                        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_account_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_name"
+                    android:text="asdfqwerasdf"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="@+id/imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+                <TextView
+                    android:id="@+id/tv_current_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CurrentBalance(THB)"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="@+id/imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_account_id" />
+
+                <TextView
+                    android:id="@+id/tv_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="57,000.00"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="@+id/imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_current_balance" />
+
+
+                <TextView
+                    android:id="@+id/tv_available"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Available balance(THB)"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="@+id/imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_balance" />
+
+                <TextView
+                    android:id="@+id/tv_available_balance"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_balance"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="end"
+                    android:text="47,599.00"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_available"
+                    app:layout_constraintTop_toTopOf="@+id/tv_available" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</layout>
