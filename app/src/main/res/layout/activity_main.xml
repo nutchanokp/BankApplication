@@ -20,7 +20,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/bnv_main"
+            android:layout_above="@+id/cl_bnv_main"
+            android:layout_alignParentTop="true"
             android:orientation="vertical">
 
             <!--toolbar-->
@@ -32,216 +33,21 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_account"
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/nav_host_container"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:listitem="@layout/item_rv_account" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="1/4" />
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cv_transfer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_10dp"
-                app:cardBackgroundColor="@color/white"
-                app:cardCornerRadius="@dimen/cardview_conner_radius"
-                app:cardElevation="2dp"
-                app:cardUseCompatPadding="true">
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginVertical="@dimen/margin_20dp"
-                    android:orientation="horizontal"
-                    android:weightSum="4">
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:adjustViewBounds="true"
-                            android:background="?selectableItemBackgroundBorderless"
-                            android:contentDescription="@null"
-                            android:padding="@dimen/padding_4dp"
-                            android:src="@drawable/ic_transfer"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Transfer" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:adjustViewBounds="true"
-                            android:background="?selectableItemBackgroundBorderless"
-                            android:contentDescription="@null"
-                            android:padding="@dimen/padding_4dp"
-                            android:src="@drawable/ic_top_up"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="Top Up" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:adjustViewBounds="true"
-                            android:background="?selectableItemBackgroundBorderless"
-                            android:contentDescription="@null"
-                            android:padding="@dimen/padding_4dp"
-                            android:src="@drawable/ic_pay_bills"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="Pay Bills" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:adjustViewBounds="true"
-                            android:background="?selectableItemBackgroundBorderless"
-                            android:contentDescription="@null"
-                            android:padding="@dimen/padding_4dp"
-                            android:src="@drawable/ic_more"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="More" />
-                    </LinearLayout>
-
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_10dp"
-                android:text="@string/transactions"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_size_default_sm" />
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cv_product"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_5dp"
-                app:cardBackgroundColor="@color/white"
-                app:cardCornerRadius="@dimen/cardview_conner_radius"
-                app:cardElevation="2dp"
-                app:cardUseCompatPadding="true">
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-                        android:id="@+id/swipeRefresh"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_above="@+id/tv_statement">
-
-                        <androidx.recyclerview.widget.RecyclerView
-                            android:id="@+id/rv_transactions"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                            tools:listitem="@layout/item_rv_transactions" />
-                    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
-
-                    <TextView
-                        android:id="@+id/tv_statement"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_centerHorizontal="true"
-                        android:text="@string/request_statement"
-                        android:textColor="@color/blue"
-                        android:textStyle="bold" />
-
-                </RelativeLayout>
-
-
-            </androidx.cardview.widget.CardView>
-
+                android:layout_height="match_parent" />
         </LinearLayout>
 
         <!-- bottom menu bar -->
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/bnv_main"
+            android:id="@+id/cl_bnv_main"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true">
 
             <com.google.android.material.bottomnavigation.BottomNavigationView
-
+                android:id="@+id/bnv_main"
                 android:layout_width="match_parent"
                 android:layout_height="?actionBarSize"
                 android:background="@drawable/cornor"
@@ -272,8 +78,8 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="10dp"
                     android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
                     android:src="@drawable/ic_scan" />
 
                 <TextView

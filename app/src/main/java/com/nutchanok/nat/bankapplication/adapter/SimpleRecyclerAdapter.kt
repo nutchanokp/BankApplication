@@ -39,6 +39,10 @@ open class SimpleRecyclerAdapter<Item, Binding : ViewDataBinding> :
         this.itemCount = itemCount
     }
 
+    override fun onViewAttachedToWindow(holder: RecyclerView.ViewHolder) {
+        super.onViewAttachedToWindow(holder)
+        
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return when (viewType) {

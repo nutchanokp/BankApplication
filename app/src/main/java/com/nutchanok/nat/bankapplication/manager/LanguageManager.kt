@@ -1,7 +1,7 @@
 package com.nutchanok.nat.bankapplication.manager
 
 import com.nutchanok.nat.bankapplication.constant.PaperKey
-import com.nutchanok.nat.bankapplication.getUiText
+import com.nutchanok.nat.bankapplication.extensions.getUiText
 import io.paperdb.Paper
 
 

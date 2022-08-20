@@ -1,20 +1,12 @@
 package com.nutchanok.nat.bankapplication.extensions
 
-import android.content.Context
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.view.animation.AnimationUtils
-import androidx.core.content.ContextCompat
-import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.nutchanok.nat.bankapplication.adapter.SimpleRecyclerAdapter
-import com.nutchanok.nat.bankapplication.R
 import com.nutchanok.nat.bankapplication.adapter.BaseItemViewType
-import com.nutchanok.nat.bankapplication.adapter.recyclerview.*
-import com.nutchanok.nat.bankapplication.getUiText
+import com.nutchanok.nat.bankapplication.adapter.SimpleRecyclerAdapter
+import com.nutchanok.nat.bankapplication.adapter.recyclerview.LoadingView
+import com.nutchanok.nat.bankapplication.adapter.recyclerview.VTLoading
 
 
 fun <Item, Binding : ViewDataBinding> Any.createRecyclerViewAdapter(
