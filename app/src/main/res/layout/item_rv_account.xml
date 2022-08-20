@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-<!--        <import type="com.feyverly.pos.extensions.StringExtensionsKt"/>-->
+        <!--        <import type="com.feyverly.pos.extensions.StringExtensionsKt"/>-->
         <variable
             name="item"
-            type="com.nutchanok.nat.bankapplication.model.UIContentModel" />
+            type="com.nutchanok.nat.bankapplication.model.BankAccountModel" />
     </data>
 
     <RelativeLayout
@@ -14,21 +14,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-        <androidx.cardview.widget.CardView
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/transparent">
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_margin="6dp"
                 android:orientation="vertical">
 
                 <ImageView
                     android:id="@+id/imageView"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="150dp"
                     android:scaleType="fitXY"
                     android:src="@drawable/bg_card_account"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -40,7 +41,7 @@
                     android:id="@+id/tv_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="asdfqwerasdf"
+                    android:text="name"
                     android:textColor="@color/white"
                     app:layout_constraintStart_toStartOf="@+id/imageView"
                     app:layout_constraintTop_toTopOf="@+id/imageView" />
@@ -56,7 +57,7 @@
                     app:layout_constraintTop_toTopOf="@+id/imageView">
 
                     <TextView
-                        android:id="@+id/tv_savings"
+                        android:id="@+id/tv_account_type"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Saving"
@@ -65,7 +66,7 @@
                         app:layout_constraintTop_toTopOf="@+id/imageView" />
 
                     <TextView
-                        android:id="@+id/tv_main"
+                        android:id="@+id/tv_account_main"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Main"
@@ -86,7 +87,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/tv_name" />
 
                 <TextView
-                    android:id="@+id/tv_current_balance"
+                    android:id="@+id/tv_current"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="CurrentBalance(THB)"
@@ -95,13 +96,13 @@
                     app:layout_constraintTop_toBottomOf="@+id/tv_account_id" />
 
                 <TextView
-                    android:id="@+id/tv_balance"
+                    android:id="@+id/tv_current_balance"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="57,000.00"
                     android:textColor="@color/white"
                     app:layout_constraintStart_toStartOf="@+id/imageView"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_current_balance" />
+                    app:layout_constraintTop_toBottomOf="@+id/tv_current" />
 
 
                 <TextView
@@ -111,13 +112,13 @@
                     android:text="Available balance(THB)"
                     android:textColor="@color/white"
                     app:layout_constraintStart_toStartOf="@+id/imageView"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_balance" />
+                    app:layout_constraintTop_toBottomOf="@+id/tv_current_balance" />
 
                 <TextView
                     android:id="@+id/tv_available_balance"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/tv_balance"
+                    android:layout_below="@+id/tv_current_balance"
                     android:layout_alignParentEnd="true"
                     android:gravity="end"
                     android:text="47,599.00"
@@ -128,6 +129,6 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </androidx.cardview.widget.CardView>
+        </LinearLayout>
     </RelativeLayout>
 </layout>

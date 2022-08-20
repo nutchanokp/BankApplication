@@ -34,12 +34,15 @@ abstract class BaseActivity<B : ViewDataBinding> : AppCompatActivity() {
         initView()
         initListener()
         setupObserve()
+//        subscribe()
     }
 
     abstract fun getLayoutId(): Int
     abstract fun initView()
     abstract fun initListener()
     abstract fun setupObserve()
+
+//    abstract fun subscribe()
 
     override fun onNewIntent(intent: Intent?) {
         super.onNewIntent(intent)
@@ -117,19 +120,6 @@ abstract class BaseActivity<B : ViewDataBinding> : AppCompatActivity() {
 //        }
 //    }
 //
-//
-//    private fun showDialogUnAuthorized(message: String?) {
-//        if (!isShowDialogUnAuthorized) {
-//            isShowDialogUnAuthorized = true
-//            val dialog = DialogAlertMessage.newInstance(message.orEmpty())
-//            dialog.setOnButtonLeftClick {
-//                isShowDialogUnAuthorized = false
-//                UserAccountManager.instance().logout()
-//                LoginActivity.starterLogin(this)
-//            }
-//            dialog.show(supportFragmentManager)
-//        }
-//    }
 //
 //    private fun showDialogForceUpdate() {
 //        if (!isShowEventAppDialog) {
