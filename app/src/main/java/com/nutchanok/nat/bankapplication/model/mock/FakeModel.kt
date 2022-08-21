@@ -1,5 +1,7 @@
 package com.nutchanok.nat.bankapplication.model.mock
 
+import com.nutchanok.nat.bankapplication.extensions.DateFormat
+import com.nutchanok.nat.bankapplication.extensions.toDateFormat
 import com.nutchanok.nat.bankapplication.model.BankAccountModel
 import com.nutchanok.nat.bankapplication.model.TransactionModel
 import com.nutchanok.nat.bankapplication.model.UIContentModel
@@ -61,9 +63,9 @@ object FakeModel {
         val contents: MutableList<TransactionModel> = mutableListOf()
         contents.add(
             TransactionModel(
-                transferType = "asdf",
+                transferType = "OUT",
                 amount = 1000.00,
-                dateTime = "",
+                dateTime = "2022-08-10 22:20:22",
                 fromAccountBank = "asdf",
                 fromAccountName = "asdf",
                 fromAccountNo = "asdf"
@@ -71,9 +73,9 @@ object FakeModel {
         )
         contents.add(
             TransactionModel(
-                transferType = "asdf",
+                transferType = "PROMPTPAY",
                 amount = 1000.00,
-                dateTime = "",
+                dateTime = "2022-08-10 22:20:22",
                 fromAccountBank = "asdf",
                 fromAccountName = "asdf",
                 fromAccountNo = "asdf"
@@ -81,9 +83,9 @@ object FakeModel {
         )
         contents.add(
             TransactionModel(
-                transferType = "asdf",
+                transferType = "IN",
                 amount = 1000.00,
-                dateTime = "",
+                dateTime = "2022-08-10 22:20:22",
                 fromAccountBank = "asdf",
                 fromAccountName = "asdf",
                 fromAccountNo = "asdf"
@@ -91,9 +93,9 @@ object FakeModel {
         )
         contents.add(
             TransactionModel(
-                transferType = "asdf",
+                transferType = "IN",
                 amount = 1000.00,
-                dateTime = "",
+                dateTime = "2022-08-10 22:20:22",
                 fromAccountBank = "asdf",
                 fromAccountName = "asdf",
                 fromAccountNo = "asdf"

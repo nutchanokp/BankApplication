@@ -5,6 +5,7 @@ import android.os.Handler
 import android.os.Looper
 import android.view.View.GONE
 import android.view.View.VISIBLE
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager.widget.ViewPager.OnPageChangeListener
 import com.nutchanok.nat.bankapplication.R
@@ -13,8 +14,11 @@ import com.nutchanok.nat.bankapplication.base.BaseFragment
 import com.nutchanok.nat.bankapplication.databinding.FragmentAccountBinding
 import com.nutchanok.nat.bankapplication.databinding.ItemRvAccountBinding
 import com.nutchanok.nat.bankapplication.databinding.ItemRvTransactionsBinding
+import com.nutchanok.nat.bankapplication.enums.TransactionTypeEnum
+import com.nutchanok.nat.bankapplication.extensions.DateFormat
 import com.nutchanok.nat.bankapplication.extensions.loadImage
 import com.nutchanok.nat.bankapplication.extensions.toCurrency
+import com.nutchanok.nat.bankapplication.extensions.toDateFormat
 import com.nutchanok.nat.bankapplication.model.BankAccountModel
 import com.nutchanok.nat.bankapplication.model.TransactionModel
 import com.nutchanok.nat.bankapplication.ui.page.main.MainViewModel
@@ -187,15 +191,37 @@ class AccountFragment : BaseFragment<FragmentAccountBinding>() {
                 binding.apply {
 
                     item?.let { i ->
-                        tvTitle.text = i.transferType
-                        tvDateTime.text = i.dateTime
-                        tvAmount.text = i.amount.toCurrency()
+                        tvTitle.text = i.transferTypeEnum.desc
+                        tvDateTime.text = i.dateTime?.toDateFormat(
+                            DateFormat.FROM_SERVICE_TIME,
+                            DateFormat.SHOW
+                        )
                         tvFromTitle.text = i.fromAccountBank
                         tvFromAccountBank.text = i.fromAccountBank
                         tvFromAccountNo.text = i.fromAccountNo
                         tvFrom.text = i.fromAccountName
 
                         handleDetailVisibility(i.isExpanded, binding)
+                        when (i.transferTypeEnum) {
+                            TransactionTypeEnum.IN -> {
+                                tvAmount.text = "+${i.amount.toCurrency()}"
+                                tvAmount.setTextColor(
+                                    ContextCompat.getColor(
+                                        requireActivity(),
+                                        R.color.txt_green
+                                    )
+                                )
+                            }
+                            else -> {
+                                tvAmount.text = "-${i.amount.toCurrency()}"
+                                tvAmount.setTextColor(
+                                    ContextCompat.getColor(
+                                        requireActivity(),
+                                        R.color.txt_red
+                                    )
+                                )
+                            }
+                        }
 
                         btnDetail.setOnClickListener {
                             i.isExpanded = i.isExpanded != true

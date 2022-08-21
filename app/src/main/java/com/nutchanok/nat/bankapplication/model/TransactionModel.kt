@@ -3,6 +3,7 @@ package com.nutchanok.nat.bankapplication.model
 import android.os.Parcel
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import com.nutchanok.nat.bankapplication.enums.TransactionTypeEnum
 
 data class TransactionModel(
 
@@ -26,8 +27,8 @@ data class TransactionModel(
 
 ) : Parcelable {
 
-//    var transferTypeEnum: OrderTypeEnums = OrderTypeEnums.TABLE
-//        get() = OrderTypeEnums.fromType(isPackingOrder ?: 0)
+    var transferTypeEnum: TransactionTypeEnum = TransactionTypeEnum.IN
+        get() = TransactionTypeEnum.fromType(transferType ?: "IN")
 
 
     constructor(parcel: Parcel) : this(
