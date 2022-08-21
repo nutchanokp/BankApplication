@@ -7,8 +7,8 @@ import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.widget.SearchView
-import com.nutchanok.nat.bankapplication.manager.AppManager
-import com.nutchanok.nat.bankapplication.manager.LanguageManager
+import com.nutchanok.nat.bankapplication.common.manager.AppManager
+import com.nutchanok.nat.bankapplication.common.manager.LanguageManager
 import java.util.ArrayList
 
 

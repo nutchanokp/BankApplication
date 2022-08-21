@@ -1,7 +1,5 @@
-package com.nutchanok.nat.bankapplication.base
+package com.nutchanok.nat.bankapplication.common.base
 
-import com.google.gson.Gson
-import com.nutchanok.nat.bankapplication.base.response.BaseResponse
 import com.nutchanok.nat.bankapplication.network.ResultWrapper
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext

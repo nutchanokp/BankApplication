@@ -1,6 +1,6 @@
 package com.nutchanok.nat.bankapplication.network
 
-import com.nutchanok.nat.bankapplication.enums.EventAppEnum
+import com.nutchanok.nat.bankapplication.common.enums.EventAppEnum
 
 sealed class ResultWrapper<out T: Any> {
     data class Success<T : Any>(val data: T): ResultWrapper<T>()

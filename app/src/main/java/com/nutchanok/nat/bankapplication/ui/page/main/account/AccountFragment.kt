@@ -9,12 +9,12 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager.widget.ViewPager.OnPageChangeListener
 import com.nutchanok.nat.bankapplication.R
-import com.nutchanok.nat.bankapplication.adapter.SimpleRecyclerAdapter
-import com.nutchanok.nat.bankapplication.base.BaseFragment
+import com.nutchanok.nat.bankapplication.common.adapter.SimpleRecyclerAdapter
+import com.nutchanok.nat.bankapplication.common.base.BaseFragment
 import com.nutchanok.nat.bankapplication.databinding.FragmentAccountBinding
 import com.nutchanok.nat.bankapplication.databinding.ItemRvAccountBinding
 import com.nutchanok.nat.bankapplication.databinding.ItemRvTransactionsBinding
-import com.nutchanok.nat.bankapplication.enums.TransactionTypeEnum
+import com.nutchanok.nat.bankapplication.common.enums.TransactionTypeEnum
 import com.nutchanok.nat.bankapplication.extensions.DateFormat
 import com.nutchanok.nat.bankapplication.extensions.loadImage
 import com.nutchanok.nat.bankapplication.extensions.toCurrency
@@ -43,6 +43,7 @@ class AccountFragment : BaseFragment<FragmentAccountBinding>() {
     }
 
     var adapter: PagerAdapter? = null
+
 
     companion object {
         @JvmStatic
@@ -77,49 +78,32 @@ class AccountFragment : BaseFragment<FragmentAccountBinding>() {
         mainViewModel.getAccounts()
         mainViewModel.getTransactions()
 
-        var textList: MutableList<BankAccountModel> = mutableListOf()
-        textList.add(BankAccountModel())
-        textList.add(BankAccountModel())
-        textList.add(BankAccountModel())
+        setupViewPager()
+    }
 
-        adapter = PagerAdapter(textList, requireActivity())
+    private fun setupViewPager() {
 
         binding.apply {
 
             viewPager.pageMargin = 15
             viewPager.setPadding(50, 0, 50, 0);
             viewPager.clipToPadding = false
-            viewPager.pageMargin = 25
             viewPager.adapter = adapter
         }
-
-        setupViewPager()
-    }
-
-    private fun setupViewPager() {
-
 //        binding.viewPager.adapter = adapter
-        binding.viewPager.setPadding(130, 0, 130, 0)
         binding.viewPager.addOnPageChangeListener(object : OnPageChangeListener {
             override fun onPageScrolled(
                 position: Int,
                 positionOffset: Float,
                 positionOffsetPixels: Int
             ) {
-//                if (position < adapter?.count - 1 && position < colors.length - 1) {
-//                    viewPager!!.setBackgroundColor(
-//                        (argbEvaluator.evaluate(
-//                            positionOffset,
-//                            colors.get(position),
-//                            colors.get(position + 1)
-//                        ) as Int)!!
-//                    )
-//                } else {
-////                    viewPager!!.setBackgroundColor(colors.get(colors.length - 1))
-//                }
+                position
             }
 
-            override fun onPageSelected(position: Int) {}
+            override fun onPageSelected(position: Int) {
+                binding.tvAccountTotal.text = "${position.plus(1)}/${adapter?.getTotal()}"
+            }
+
             override fun onPageScrollStateChanged(state: Int) {}
         })
     }
@@ -143,7 +127,7 @@ class AccountFragment : BaseFragment<FragmentAccountBinding>() {
             accountAdapter.addList(true, it.toMutableList())
             adapter = PagerAdapter(it, requireActivity())
             binding.viewPager.adapter = adapter
-
+            binding.tvAccountTotal.text = "1/${adapter?.getTotal()}"
         }
         mainViewModel.transactionsResult().observe(this) {
             transactionAdapter.addList(true, it.toMutableList())
@@ -166,7 +150,6 @@ class AccountFragment : BaseFragment<FragmentAccountBinding>() {
                     item?.let { i ->
                         this.tvName.text = "${i.userName} ${i.userLastname}"
                         this.tvAccountType.text = i.accountType
-                        this.tvAccountMain.text = i.accountType
                         this.tvAccountMain.text = i.accountType
                         this.tvCurrentBalance.text = i.currentBalance.toCurrency()
                         this.tvAvailableBalance.text = i.availableBalance.toCurrency()

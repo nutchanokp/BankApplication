@@ -1,4 +1,4 @@
-package com.nutchanok.nat.bankapplication.base
+package com.nutchanok.nat.bankapplication.common.base
 
 import android.os.Bundle
 import android.view.LayoutInflater

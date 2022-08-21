@@ -1,12 +1,12 @@
-package com.nutchanok.nat.bankapplication.adapter
+package com.nutchanok.nat.bankapplication.common.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.RecyclerView
-import com.nutchanok.nat.bankapplication.adapter.recyclerview.RecyclerViewLoadingHolder
-import com.nutchanok.nat.bankapplication.adapter.recyclerview.createLoadingHolder
+import com.nutchanok.nat.bankapplication.common.adapter.recyclerview.RecyclerViewLoadingHolder
+import com.nutchanok.nat.bankapplication.common.adapter.recyclerview.createLoadingHolder
 import com.nutchanok.nat.bankapplication.extensions.addNewList
 import com.nutchanok.nat.bankapplication.extensions.handleStateLoading
 

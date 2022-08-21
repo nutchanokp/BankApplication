@@ -1,6 +1,6 @@
-package com.nutchanok.nat.bankapplication.manager
+package com.nutchanok.nat.bankapplication.common.manager
 
-import com.nutchanok.nat.bankapplication.constant.PaperKey
+import com.nutchanok.nat.bankapplication.common.constant.PaperKey
 import com.nutchanok.nat.bankapplication.model.UIContentModel
 import io.paperdb.Paper
 

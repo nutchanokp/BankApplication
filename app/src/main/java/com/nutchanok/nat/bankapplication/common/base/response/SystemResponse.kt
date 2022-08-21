@@ -1,4 +1,4 @@
-package com.nutchanok.nat.bankapplication.base.response
+package com.nutchanok.nat.bankapplication.common.base.response
 
 data class SystemResponse(
     var code: String? = null,

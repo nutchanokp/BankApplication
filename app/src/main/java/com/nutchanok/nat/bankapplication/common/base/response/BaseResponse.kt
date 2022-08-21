@@ -1,4 +1,4 @@
-package com.nutchanok.nat.bankapplication.base.response
+package com.nutchanok.nat.bankapplication.common.base.response
 
 import com.google.gson.annotations.SerializedName
 

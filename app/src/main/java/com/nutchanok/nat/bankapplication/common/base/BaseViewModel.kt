@@ -1,4 +1,4 @@
-//package com.nutchanok.nat.bankapplication.base
+//package com.nutchanok.nat.bankapplication.common.base
 //
 //import androidx.lifecycle.MutableLiveData
 //import androidx.lifecycle.ViewModel

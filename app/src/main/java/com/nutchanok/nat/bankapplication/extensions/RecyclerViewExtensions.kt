@@ -3,10 +3,10 @@ package com.nutchanok.nat.bankapplication.extensions
 import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.nutchanok.nat.bankapplication.adapter.BaseItemViewType
-import com.nutchanok.nat.bankapplication.adapter.SimpleRecyclerAdapter
-import com.nutchanok.nat.bankapplication.adapter.recyclerview.LoadingView
-import com.nutchanok.nat.bankapplication.adapter.recyclerview.VTLoading
+import com.nutchanok.nat.bankapplication.common.adapter.BaseItemViewType
+import com.nutchanok.nat.bankapplication.common.adapter.SimpleRecyclerAdapter
+import com.nutchanok.nat.bankapplication.common.adapter.recyclerview.LoadingView
+import com.nutchanok.nat.bankapplication.common.adapter.recyclerview.VTLoading
 
 
 fun <Item, Binding : ViewDataBinding> Any.createRecyclerViewAdapter(

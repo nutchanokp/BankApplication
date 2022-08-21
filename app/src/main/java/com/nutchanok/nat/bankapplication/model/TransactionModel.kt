@@ -3,7 +3,7 @@ package com.nutchanok.nat.bankapplication.model
 import android.os.Parcel
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
-import com.nutchanok.nat.bankapplication.enums.TransactionTypeEnum
+import com.nutchanok.nat.bankapplication.common.enums.TransactionTypeEnum
 
 data class TransactionModel(
 

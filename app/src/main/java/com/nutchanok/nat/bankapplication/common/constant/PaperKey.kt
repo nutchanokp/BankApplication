@@ -1,4 +1,4 @@
-package com.nutchanok.nat.bankapplication.constant
+package com.nutchanok.nat.bankapplication.common.constant
 
 class PaperKey {
     companion object{

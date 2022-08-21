@@ -1,6 +1,6 @@
 package com.nutchanok.nat.bankapplication
 
-import com.nutchanok.nat.bankapplication.base.response.BaseResponse
+import com.nutchanok.nat.bankapplication.common.base.response.BaseResponse
 import com.nutchanok.nat.bankapplication.model.UIContentModel
 import retrofit2.Call
 import retrofit2.http.GET

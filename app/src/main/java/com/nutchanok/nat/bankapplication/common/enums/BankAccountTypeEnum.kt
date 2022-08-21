@@ -1,4 +1,4 @@
-package com.nutchanok.nat.bankapplication.enums
+package com.nutchanok.nat.bankapplication.common.enums
 
 enum class BankAccountTypeEnum(val type: String, val title: String, val description: String) {
 

@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.lifecycle.LiveData
 import androidx.navigation.NavController
 import com.nutchanok.nat.bankapplication.R
-import com.nutchanok.nat.bankapplication.base.BaseActivity
+import com.nutchanok.nat.bankapplication.common.base.BaseActivity
 import com.nutchanok.nat.bankapplication.databinding.ActivityMainBinding
 import com.nutchanok.nat.bankapplication.extensions.setupWithNavController
 import org.koin.androidx.viewmodel.ext.android.viewModel

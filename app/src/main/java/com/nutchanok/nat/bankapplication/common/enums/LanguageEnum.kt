@@ -1,4 +1,4 @@
-package com.nutchanok.nat.bankapplication.enums
+package com.nutchanok.nat.bankapplication.common.enums
 
 enum class LanguageEnum(val language: String) {
 

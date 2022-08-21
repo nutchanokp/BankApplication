@@ -1,4 +1,4 @@
-package com.nutchanok.nat.bankapplication.rx
+package com.nutchanok.nat.bankapplication.common.rx
 
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.subjects.PublishSubject

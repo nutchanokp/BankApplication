@@ -1,4 +1,4 @@
-package com.nutchanok.nat.bankapplication.adapter
+package com.nutchanok.nat.bankapplication.common.adapter
 
 
 class SimpleViewType {

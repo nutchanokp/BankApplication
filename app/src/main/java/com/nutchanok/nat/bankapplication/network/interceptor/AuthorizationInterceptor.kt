@@ -1,6 +1,6 @@
 package com.nutchanok.nat.bankapplication.network.interceptor
 
-import com.nutchanok.nat.bankapplication.manager.LanguageManager
+import com.nutchanok.nat.bankapplication.common.manager.LanguageManager
 import okhttp3.Interceptor
 import okhttp3.Request
 import okhttp3.Response

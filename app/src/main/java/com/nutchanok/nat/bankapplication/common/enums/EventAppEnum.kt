@@ -1,6 +1,6 @@
-package com.nutchanok.nat.bankapplication.enums
+package com.nutchanok.nat.bankapplication.common.enums
 
-enum class EventAppEnums(val code: String) {
+enum class EventAppEnum(val code: String) {
 
     FORCE_UPDATE("force"),
     SOFT_UPDATE("soft"),
@@ -9,9 +9,9 @@ enum class EventAppEnums(val code: String) {
     NONE("none");
 
     companion object {
-        fun fromCode(code: String?): EventAppEnums {
+        fun fromCode(code: String?): EventAppEnum {
             if (code != null) {
-                values().find { code.toLowerCase() == it.code.toLowerCase() }?.let {
+                values().find { code.equals(it.code, ignoreCase = true) }?.let {
                     return it
                 }
             }
