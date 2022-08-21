@@ -15,4 +15,8 @@
 
     <color name="gray">#8E8E8E</color>
 
+    <color name="line_gray">#f9fafb</color>
+
+    <color name="txt_blue">#788893</color>
+
 </resources>

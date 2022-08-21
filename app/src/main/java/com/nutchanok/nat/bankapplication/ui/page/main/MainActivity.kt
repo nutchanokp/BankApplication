@@ -3,11 +3,9 @@ package com.nutchanok.nat.bankapplication.ui.page.main
 import android.os.Bundle
 import androidx.lifecycle.LiveData
 import androidx.navigation.NavController
-import com.google.android.material.navigation.NavigationBarView
 import com.nutchanok.nat.bankapplication.R
 import com.nutchanok.nat.bankapplication.base.BaseActivity
 import com.nutchanok.nat.bankapplication.databinding.ActivityMainBinding
-import com.nutchanok.nat.bankapplication.extensions.disableTooltip
 import com.nutchanok.nat.bankapplication.extensions.setupWithNavController
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -43,7 +41,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     private fun setUpBottomNavigatorBar() {
 
-        binding.bnvMain.itemIconTintList = null
+//        binding.bnvMain.itemIconTintList = null
         with(binding) {
 //            bnvMain.apply {
 ////                itemIconTintList = it.itemId
@@ -66,6 +64,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
             ) { id ->
                 return@setupWithNavController true
             }
+            bnvMain.selectedItemId = R.id.nav_account
 
 //            bnvMain.apply {
 //                disableTooltip()
@@ -74,8 +73,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 //                    return@OnItemSelectedListener true
 //                })
 //            }
-
-            navController = navController
 
         }
     }

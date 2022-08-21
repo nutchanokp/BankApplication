@@ -2,10 +2,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
+
         <variable
             name="item"
             type="com.nutchanok.nat.bankapplication.model.TransactionModel" />
     </data>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,7 +21,8 @@
                 android:id="@+id/tv_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Transfer In" />
+                android:text="Transfer In"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/tv_date_time"
@@ -28,7 +31,8 @@
                 android:layout_alignParentEnd="true"
                 android:layout_toEndOf="@+id/tv_title"
                 android:gravity="end"
-                android:text="20 Nov 2019 - 12:00" />
+                android:text="20 Nov 2019 - 12:00"
+                android:textColor="@color/txt_blue" />
 
         </RelativeLayout>
 
@@ -41,8 +45,8 @@
 
         <ImageView
             android:id="@+id/btn_detail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:layout_gravity="end"
             android:src="@drawable/ic_arrow_down" />
 
@@ -50,62 +54,74 @@
             android:layout_width="match_parent"
             android:layout_height="0.3dp"
             android:layout_marginTop="@dimen/margin_10dp"
-            android:background="@color/black" />
+            android:background="@color/line_gray" />
 
-
-        <RelativeLayout
+        <LinearLayout
+            android:id="@+id/view_show_detail"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="@color/line_gray"
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/tv_from_account_title"
+            <RelativeLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="From account no." />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_toEndOf="@+id/tv_from_account_title"
-                android:gravity="end"
-                android:orientation="vertical">
+                android:layout_height="wrap_content">
 
                 <TextView
-                    android:id="@+id/tv_from_account_bank"
+                    android:id="@+id/tv_from_account_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Krungthai" />
+                    android:text="From account no."
+                    android:textColor="@color/txt_blue" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/tv_from_account_title"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_from_account_bank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Krungthai"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tv_from_account_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="XXX-X-XX234-0"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
                 <TextView
-                    android:id="@+id/tv_from_account_no"
+                    android:id="@+id/tv_from_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="XXX-X-XX234-0" />
-            </LinearLayout>
+                    android:text="From account name"
+                    android:textColor="@color/txt_blue" />
 
-        </RelativeLayout>
+                <TextView
+                    android:id="@+id/tv_from"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/tv_from_title"
+                    android:gravity="end"
+                    android:text="Varee Meetang"
+                    android:textColor="@color/black" />
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            </RelativeLayout>
 
-            <TextView
-                android:id="@+id/tv_from_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="From account name" />
-
-            <TextView
-                android:id="@+id/tv_from"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_toEndOf="@+id/tv_from_title"
-                android:gravity="end"
-                android:text="Varee Meetang" />
-
-        </RelativeLayout>
-
+        </LinearLayout>
     </LinearLayout>
 </layout>

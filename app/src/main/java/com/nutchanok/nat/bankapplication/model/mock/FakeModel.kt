@@ -61,42 +61,42 @@ object FakeModel {
         val contents: MutableList<TransactionModel> = mutableListOf()
         contents.add(
             TransactionModel(
-                transfer_type = "asdf",
+                transferType = "asdf",
                 amount = 1000.00,
-                date_time = "",
-                from_account_bank = "asdf",
-                from_account_name = "asdf",
-                from_account_no = "asdf"
+                dateTime = "",
+                fromAccountBank = "asdf",
+                fromAccountName = "asdf",
+                fromAccountNo = "asdf"
             )
         )
         contents.add(
             TransactionModel(
-                transfer_type = "asdf",
+                transferType = "asdf",
                 amount = 1000.00,
-                date_time = "",
-                from_account_bank = "asdf",
-                from_account_name = "asdf",
-                from_account_no = "asdf"
+                dateTime = "",
+                fromAccountBank = "asdf",
+                fromAccountName = "asdf",
+                fromAccountNo = "asdf"
             )
         )
         contents.add(
             TransactionModel(
-                transfer_type = "asdf",
+                transferType = "asdf",
                 amount = 1000.00,
-                date_time = "",
-                from_account_bank = "asdf",
-                from_account_name = "asdf",
-                from_account_no = "asdf"
+                dateTime = "",
+                fromAccountBank = "asdf",
+                fromAccountName = "asdf",
+                fromAccountNo = "asdf"
             )
         )
         contents.add(
             TransactionModel(
-                transfer_type = "asdf",
+                transferType = "asdf",
                 amount = 1000.00,
-                date_time = "",
-                from_account_bank = "asdf",
-                from_account_name = "asdf",
-                from_account_no = "asdf"
+                dateTime = "",
+                fromAccountBank = "asdf",
+                fromAccountName = "asdf",
+                fromAccountNo = "asdf"
             )
         )
         return contents
