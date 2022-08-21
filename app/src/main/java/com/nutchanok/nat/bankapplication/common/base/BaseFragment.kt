@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
-import com.nutchanok.nat.bankapplication.extensions.overrideUIText
 
 abstract class BaseFragment<B : ViewDataBinding> : Fragment() {
 
@@ -28,7 +27,7 @@ abstract class BaseFragment<B : ViewDataBinding> : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         getExtra(arguments)
-        overrideUIText(binding.root)
+//        overrideUIText(binding.root)
         setUp()
         subscribe()
         if (!isVisit) {

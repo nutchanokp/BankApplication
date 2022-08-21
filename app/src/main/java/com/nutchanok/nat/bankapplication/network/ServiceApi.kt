@@ -1,4 +1,4 @@
-package com.nutchanok.nat.bankapplication
+package com.nutchanok.nat.bankapplication.network
 
 
 class ServiceApi {

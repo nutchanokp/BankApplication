@@ -40,15 +40,15 @@
 
         <TextView
             android:id="@+id/tv_amount"
+            style="@style/FontBold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:layout_marginHorizontal="@dimen/margin_11dp"
             android:layout_marginTop="@dimen/margin_4dp"
-            style="@style/FontBold"
             android:text="-1,500.00"
             android:textColor="@color/txt_red"
-            android:textSize="@dimen/text_size_default_s"/>
+            android:textSize="@dimen/text_size_default_s" />
 
         <ImageView
             android:id="@+id/btn_detail"
@@ -99,7 +99,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Krungthai"
-                        android:textColor="@color/black" />
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/tv_from_account_no"
@@ -107,7 +108,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/margin_4dp"
                         android:text="XXX-X-XX234-0"
-                        android:textColor="@color/black" />
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
             </RelativeLayout>
@@ -134,7 +136,8 @@
                     android:layout_toEndOf="@+id/tv_from_title"
                     android:gravity="end"
                     android:text="Varee Meetang"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
 
             </RelativeLayout>
 

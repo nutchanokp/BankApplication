@@ -3,6 +3,7 @@ package com.nutchanok.nat.bankapplication.model
 import android.os.Parcel
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import com.nutchanok.nat.bankapplication.common.enums.BankAccountTypeEnum
 
 data class BankAccountModel(
 
@@ -22,6 +23,9 @@ data class BankAccountModel(
     var availableBalance: Double? = null
 
 ) : Parcelable {
+
+    var accountTypeEnum: BankAccountTypeEnum = BankAccountTypeEnum.SAVINGS
+        get() = BankAccountTypeEnum.fromType(accountType ?: "SAVINGS")
 
     constructor(parcel: Parcel) : this(
         parcel.readValue(Int::class.java.classLoader) as? Int,

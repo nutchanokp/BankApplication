@@ -1,4 +1,4 @@
-package com.nutchanok.nat.bankapplication
+package com.nutchanok.nat.bankapplication.network
 
 import com.nutchanok.nat.bankapplication.common.base.response.BaseResponse
 import com.nutchanok.nat.bankapplication.model.UIContentModel

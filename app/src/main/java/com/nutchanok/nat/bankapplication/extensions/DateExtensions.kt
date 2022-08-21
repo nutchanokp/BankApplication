@@ -87,47 +87,6 @@ fun Any.daysBetween(startDate: Date, endDate: Date): Int {
     return daysBetween
 }
 
-fun String.toTimeStamp(): String {
-    val offerTime = this.toCalendarFromServiceFormatTime()
-    val now = Calendar.getInstance(TimeZone.getDefault())
-    now.set(Calendar.MILLISECOND, 0)
-    now.set(Calendar.SECOND, 0)
-
-    val value: Int
-    val unit: String
-
-    val year = now.get(Calendar.YEAR) - offerTime.get(Calendar.YEAR)
-    val month = now.get(Calendar.MONTH) - offerTime.get(Calendar.MONTH)
-    val day = now.get(Calendar.DATE) - offerTime.get(Calendar.DATE)
-    val hour = now.get(Calendar.HOUR) - offerTime.get(Calendar.HOUR)
-    val minute = now.get(Calendar.MINUTE) - offerTime.get(Calendar.MINUTE)
-
-    when {
-        year > 0 -> {
-            value = year
-            unit = getUiText("700013", "year ago")
-        }
-        month > 0 -> {
-            value = month
-            unit = getUiText("700012", "month ago")
-        }
-        day > 0 -> {
-            value = day
-            unit = getUiText("700010", "day ago")
-        }
-        hour > 0 -> {
-            value = hour
-            unit = getUiText("700009", "hour ago")
-        }
-        minute > 0 -> {
-            value = minute
-            unit = getUiText("700008", "minute ago")
-        }
-        else -> return getUiText("700005", "just now")
-    }
-    return String.format("%s %s", value, unit)
-}
-
 fun DatePicker.getDate(): String {
     val day = this.dayOfMonth
     val month = this.month

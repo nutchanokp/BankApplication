@@ -81,33 +81,6 @@ class AccountFragment : BaseFragment<FragmentAccountBinding>() {
         setupViewPager()
     }
 
-    private fun setupViewPager() {
-
-        binding.apply {
-
-            viewPager.pageMargin = 15
-            viewPager.setPadding(50, 0, 50, 0);
-            viewPager.clipToPadding = false
-            viewPager.adapter = adapter
-        }
-//        binding.viewPager.adapter = adapter
-        binding.viewPager.addOnPageChangeListener(object : OnPageChangeListener {
-            override fun onPageScrolled(
-                position: Int,
-                positionOffset: Float,
-                positionOffsetPixels: Int
-            ) {
-                position
-            }
-
-            override fun onPageSelected(position: Int) {
-                binding.tvAccountTotal.text = "${position.plus(1)}/${adapter?.getTotal()}"
-            }
-
-            override fun onPageScrollStateChanged(state: Int) {}
-        })
-    }
-
     private fun initListener() {
         binding.swipeRefresh.apply {
             setOnRefreshListener {
@@ -149,8 +122,8 @@ class AccountFragment : BaseFragment<FragmentAccountBinding>() {
                 binding.apply {
                     item?.let { i ->
                         this.tvName.text = "${i.userName} ${i.userLastname}"
-                        this.tvAccountType.text = i.accountType
-                        this.tvAccountMain.text = i.accountType
+                        this.tvAccountType.text = i.accountTypeEnum.title
+//                        this.tvAccountMain.text = i.accountType
                         this.tvCurrentBalance.text = i.currentBalance.toCurrency()
                         this.tvAvailableBalance.text = i.availableBalance.toCurrency()
 
@@ -179,7 +152,6 @@ class AccountFragment : BaseFragment<FragmentAccountBinding>() {
                             DateFormat.FROM_SERVICE_TIME,
                             DateFormat.SHOW
                         )
-                        tvFromTitle.text = i.fromAccountBank
                         tvFromAccountBank.text = i.fromAccountBank
                         tvFromAccountNo.text = i.fromAccountNo
                         tvFrom.text = i.fromAccountName
@@ -229,6 +201,33 @@ class AccountFragment : BaseFragment<FragmentAccountBinding>() {
 
         })
 
+    }
+
+    private fun setupViewPager() {
+
+        binding.apply {
+
+            viewPager.pageMargin = 15
+            viewPager.setPadding(50, 0, 50, 0);
+            viewPager.clipToPadding = false
+            viewPager.adapter = adapter
+        }
+//        binding.viewPager.adapter = adapter
+        binding.viewPager.addOnPageChangeListener(object : OnPageChangeListener {
+            override fun onPageScrolled(
+                position: Int,
+                positionOffset: Float,
+                positionOffsetPixels: Int
+            ) {
+                position
+            }
+
+            override fun onPageSelected(position: Int) {
+                binding.tvAccountTotal.text = "${position.plus(1)}/${adapter?.getTotal()}"
+            }
+
+            override fun onPageScrollStateChanged(state: Int) {}
+        })
     }
 
 

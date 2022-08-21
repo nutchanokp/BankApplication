@@ -34,8 +34,7 @@ class PagerAdapter(models: List<BankAccountModel>, context: Context) : PagerAdap
         val i = models[position]
         tvName.text = "${i.userName} ${i.userLastname}"
         tvAccountId.text = i.accountNo
-        tvAccountType.text = i.accountType
-        tvAccountMain.text = i.accountType
+        tvAccountType.text = i.accountTypeEnum.title
         tvCurrentBalance.text = i.currentBalance.toCurrency()
         tvAvailableBalance.text = i.availableBalance.toCurrency()
 

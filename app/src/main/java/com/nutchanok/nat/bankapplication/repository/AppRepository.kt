@@ -10,7 +10,7 @@ import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 
 class AppRepository(
-    private val api: AppAPI,
+    private val api: AppAPI ,
     private val dispatcher: CoroutineDispatcher = Dispatchers.IO
 ) : BaseRepository() {
 

@@ -14,18 +14,5 @@ fun Double?.toCurrency(): String {
     }
 }
 
-fun String?.toDoublePrice(): Double {
-    return this?.replace(",", "")?.replace(" ฿", "")?.toDouble() ?: 0.0
-}
-
-fun Double?.toCurrency2(): String {
-    return if (this != null) {
-        val decimal = DecimalFormat("#,##0.00")
-        decimal.format(this)
-    } else {
-        "-"
-    }
-}
-
 
 

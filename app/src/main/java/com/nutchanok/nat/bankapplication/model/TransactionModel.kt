@@ -30,7 +30,6 @@ data class TransactionModel(
     var transferTypeEnum: TransactionTypeEnum = TransactionTypeEnum.IN
         get() = TransactionTypeEnum.fromType(transferType ?: "IN")
 
-
     constructor(parcel: Parcel) : this(
         parcel.readValue(Int::class.java.classLoader) as? Int,
         parcel.readString(),

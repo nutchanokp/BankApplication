@@ -1,7 +1,6 @@
 package com.nutchanok.nat.bankapplication.common.manager
 
 import com.nutchanok.nat.bankapplication.common.constant.PaperKey
-import com.nutchanok.nat.bankapplication.extensions.getUiText
 import io.paperdb.Paper
 
 
@@ -9,9 +8,6 @@ object LanguageManager {
 
     const val TH = "th"
     const val EN = "en"
-
-    val closeText
-        get() = getUiText("102006", "Close")
 
     fun setLanguage(code: String) {
         Paper.book().write(PaperKey.LANGUAGE, code)
