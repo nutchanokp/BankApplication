@@ -11,6 +11,8 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {
 
+    // test
+    
     private val mainViewModel: MainViewModel by viewModel()
 
     private var navController: LiveData<NavController>? = null
