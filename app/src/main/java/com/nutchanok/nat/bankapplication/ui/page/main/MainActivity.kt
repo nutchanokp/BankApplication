@@ -14,6 +14,8 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     // test
     //
     //
+    // test
+    // test
     
     private val mainViewModel: MainViewModel by viewModel()
 
